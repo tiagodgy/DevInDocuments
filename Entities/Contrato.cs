@@ -68,7 +68,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("Formato invalido, utilize dd/mm/aaaa");
+                    Menu.ErroConsole("Formato invalido, utilize dd/mm/aaaa");
                     continue;
                 }
             }
@@ -91,7 +91,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
 
@@ -129,7 +129,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome atual do estabelecimento é {this.nomeEstabelecimento}");
                     Console.WriteLine("Digite o novo nome:");
                     this.nomeEstabelecimento = Console.ReadLine();
-                    Console.WriteLine($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
+                    Menu.SucessoConsole($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "2")
@@ -137,7 +137,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O CNPJ atual é {this.cnpj}");
                     Console.WriteLine("Digite o novo CNPJ:");
                     this.cnpj = Console.ReadLine();
-                    Console.WriteLine($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
+                    Menu.SucessoConsole($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "3")
@@ -145,7 +145,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"A finalidade atual é {this.finalidade}");
                     Console.WriteLine("Digite a nova finalidade:");
                     this.finalidade = Console.ReadLine();
-                    Console.WriteLine($"A finalidade foi alterado para {this.finalidade} com sucesso!");
+                    Menu.SucessoConsole($"A finalidade foi alterado para {this.finalidade} com sucesso!");
                     continue;
 
                 }
@@ -154,7 +154,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome da primeira testemunha atual é {this.testemunha1}");
                     Console.WriteLine("Digite o nome da nova testemunha:");
                     this.testemunha1 = Console.ReadLine();
-                    Console.WriteLine($"O nome da primeira testemunha foi alterado para {this.testemunha1} com sucesso!");
+                    Menu.SucessoConsole($"O nome da primeira testemunha foi alterado para {this.testemunha1} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "5")
@@ -162,7 +162,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome da segunda testeminha atual é {this.testemunha2}");
                     Console.WriteLine("Digite o nome da nova testemunha:");
                     this.testemunha2 = Console.ReadLine();
-                    Console.WriteLine($"O nome da segunda testemunha foi alterado para {this.testemunha2} com sucesso!");
+                    Menu.SucessoConsole($"O nome da segunda testemunha foi alterado para {this.testemunha2} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "6")
@@ -180,12 +180,12 @@ namespace DevInDocuments.Entities
                         }
                         else
                         {
-                            Console.WriteLine("Formato invalido, utilize dd/mm/aaaa");
+                            Menu.ErroConsole("Formato invalido, utilize dd/mm/aaaa");
                             continue;
                         }
                     }
                     this.dataExpiracao = dataExpiracao;
-                    Console.WriteLine($"O data de expiração foi alterado para {this.testemunha2} com sucesso!");
+                    Menu.SucessoConsole($"O data de expiração foi alterado para {this.testemunha2} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "7")
@@ -194,7 +194,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
             }

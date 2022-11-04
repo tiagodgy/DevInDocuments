@@ -83,11 +83,12 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
             }
-            Console.WriteLine($"O status do documento foi alterado para {this.status}");
+            this.dataAlteracao = DateTime.Now;
+            Menu.SucessoConsole($"O status do documento foi alterado para {this.status}");
         }
     }
 }

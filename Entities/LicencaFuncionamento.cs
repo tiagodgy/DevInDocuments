@@ -66,7 +66,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
 
@@ -100,7 +100,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome atual do estabelecimento é {this.nomeEstabelecimento}");
                     Console.WriteLine("Digite o novo nome:");
                     this.nomeEstabelecimento = Console.ReadLine();
-                    Console.WriteLine($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
+                    Menu.SucessoConsole($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "2")
@@ -108,7 +108,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O CNPJ atual é {this.cnpj}");
                     Console.WriteLine("Digite o novo CNPJ:");
                     this.cnpj = Console.ReadLine();
-                    Console.WriteLine($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
+                    Menu.SucessoConsole($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "3")
@@ -116,7 +116,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O endereço atual é {this.endereco}");
                     Console.WriteLine("Digite o novo endereço:");
                     this.endereco = Console.ReadLine();
-                    Console.WriteLine($"O endereço foi alterado para {this.endereco} com sucesso!");
+                    Menu.SucessoConsole($"O endereço foi alterado para {this.endereco} com sucesso!");
                     continue;
 
                 }
@@ -125,7 +125,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"A área de atuação atual é {this.areaAtuacao}");
                     Console.WriteLine("Digite a nova área de atuação:");
                     this.areaAtuacao = Console.ReadLine();
-                    Console.WriteLine($"A área de atuação foi alterado para {this.areaAtuacao} com sucesso!");
+                    Menu.SucessoConsole($"A área de atuação foi alterado para {this.areaAtuacao} com sucesso!");
                     continue;
                 }
                 
@@ -135,7 +135,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
             }

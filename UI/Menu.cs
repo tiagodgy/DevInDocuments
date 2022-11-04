@@ -100,7 +100,7 @@ namespace DevInDocuments.UI
                 }
                 else
                 {
-                    Console.WriteLine("Formato invalido, utilize dd/mm/aaaa");
+                    ErroConsole("Formato invalido, utilize dd/mm/aaaa");
                     continue;
                 }
             }

@@ -9,8 +9,8 @@ List<Pessoa> pessoas = new List<Pessoa>();
 Pessoa tiago = new Pessoa("1", "Tiago", "Rua, Bairro", new DateTime(04 / 10 / 2000), "Empregado", DateTime.Now, "123");
 pessoas.Add(tiago);
 NotaFiscal notaFiscal = new NotaFiscal("1", DateTime.Now, DateTime.Now, "Associação Comércio Paulista LTDA", "05.453.997/0001-59", EnumStatus.EmTramitacao, tiago.Codigo, 100m, "Kit copo de vidro", EnumImpostos.ICMS, 10m);
-LicencaFuncionamento licenca = new LicencaFuncionamento("2", DateTime.Now, DateTime.Now, "Comércio de Peças Curitibano LTDA", "46.205.061/0001-96", EnumStatus.Ativo, tiago.Codigo, "Rua da avenida, bairro da cidade", "Comércio de equipamentos industriais");
-Contrato contrato = new Contrato("3", DateTime.Now, DateTime.Now, "Desenvolvimento de Software Tiago ME", "35.789.563/0001-95", EnumStatus.Suspenso, tiago.Codigo, "Aluguel de escritório", "Gustavo", "Guilherme",new DateTime(10/04/2023));
+LicencaFuncionamento licenca = new LicencaFuncionamento("2", DateTime.Now, DateTime.Now, "Comércio de Peças Curitibano LTDA", "46.205.061/0001-96", EnumStatus.Ativo, tiago.Codigo, "Rua da avenida, bairro da cidade", "Industrial");
+Contrato contrato = new Contrato("3", DateTime.Now, DateTime.Now, "Desenvolvimento de Software Tiago ME", "35.789.563/0001-95", EnumStatus.Suspenso, tiago.Codigo, "Aluguel de escritório", "Gustavo", "Guilherme",new DateTime(2023, 07, 02));
 documentos.Add(notaFiscal);
 documentos.Add(licenca);
 documentos.Add(contrato);
@@ -44,7 +44,7 @@ while (true)
     else
     {
         Console.Clear();
-        Console.WriteLine("Opção selecionada não é válida \n");
+        Menu.ErroConsole("Opção selecionada não é válida \n");
         continue;
     }
 
@@ -87,7 +87,7 @@ while (true)
             }
             else
             {
-                Console.WriteLine("Opção selecionada não é válida \n");
+                Menu.ErroConsole("Opção selecionada não é válida \n");
                 continue;
             }
         }
@@ -112,7 +112,7 @@ while (true)
     }
     else
     {
-        Console.WriteLine("Opção selecionada não é válida \n");
+        Menu.ErroConsole("Opção selecionada não é válida \n");
         continue;
     }
 

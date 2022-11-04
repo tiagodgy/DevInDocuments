@@ -58,7 +58,7 @@ namespace DevInDocuments.Entities
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("O valor inserido não é valido. Insira um valor válido:");
+                    Menu.ErroConsole("O valor inserido não é valido. Insira um valor válido:");
                     continue;
                 }
                 
@@ -100,7 +100,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("Opção escolhida não é válida, escolha uma opção válida:");
+                    Menu.ErroConsole("Opção escolhida não é válida, escolha uma opção válida:");
                     continue;
                 }
             }
@@ -115,7 +115,7 @@ namespace DevInDocuments.Entities
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("O valor inserido não é valido. Insira um valor válido:");
+                    Menu.ErroConsole("O valor inserido não é valido. Insira um valor válido:");
                     continue;
                 }
 
@@ -139,7 +139,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
             
@@ -166,7 +166,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome atual do estabelecimento é {this.nomeEstabelecimento}");
                     Console.WriteLine("Digite o novo nome:");
                     this.nomeEstabelecimento = Console.ReadLine();
-                    Console.WriteLine($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
+                    Menu.SucessoConsole($"O nome do estabelecimento foi alterado para {this.nomeEstabelecimento} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "2")
@@ -174,7 +174,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O CNPJ atual é {this.cnpj}");
                     Console.WriteLine("Digite o novo CNPJ:");
                     this.cnpj = Console.ReadLine();
-                    Console.WriteLine($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
+                    Menu.SucessoConsole($"O CNPJ foi alterado para {this.cnpj} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "3")
@@ -190,12 +190,12 @@ namespace DevInDocuments.Entities
                         }
                         catch (FormatException)
                         {
-                            Console.WriteLine("O valor inserido não é valido. Insira um valor válido:");
+                            Menu.ErroConsole("O valor inserido não é valido. Insira um valor válido:");
                             continue;
                         }
 
                     }
-                    Console.WriteLine($"O valor total foi alterado para {this.valorTotal} com sucesso!");
+                    Menu.SucessoConsole($"O valor total foi alterado para {this.valorTotal} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "4")
@@ -203,7 +203,7 @@ namespace DevInDocuments.Entities
                     Console.WriteLine($"O nome do produto atual é {this.nomeProduto}");
                     Console.WriteLine("Digite o novo nome do produto:");
                     this.nomeProduto = Console.ReadLine();
-                    Console.WriteLine($"O nome do produto foi alterado para {this.nomeProduto} com sucesso!");
+                    Menu.SucessoConsole($"O nome do produto foi alterado para {this.nomeProduto} com sucesso!");
                     continue;
 
                 }
@@ -240,11 +240,11 @@ namespace DevInDocuments.Entities
                         }
                         else
                         {
-                            Console.WriteLine("Opção escolhida não é válida, escolha uma opção válida:");
+                            Menu.ErroConsole("Opção escolhida não é válida, escolha uma opção válida:");
                             continue;
                         }
                     }
-                    Console.WriteLine($"O tipo de imposto foi alterado para {this.tipoImposto} com sucesso!");
+                    Menu.SucessoConsole($"O tipo de imposto foi alterado para {this.tipoImposto} com sucesso!");
 
                 }
                 else if (escolhaAlteracao == "6")
@@ -260,12 +260,12 @@ namespace DevInDocuments.Entities
                         }
                         catch (FormatException)
                         {
-                            Console.WriteLine("O valor inserido não é valido. Insira um valor válido:");
+                            Menu.ErroConsole("O valor inserido não é valido. Insira um valor válido:");
                             continue;
                         }
 
                     }
-                    Console.WriteLine($"O valor total de impostos foi alterado para {this.valorTotalImposto} com sucesso!");
+                    Menu.SucessoConsole($"O valor total de impostos foi alterado para {this.valorTotalImposto} com sucesso!");
                     continue;
                 }
                 else if (escolhaAlteracao == "7")
@@ -274,7 +274,7 @@ namespace DevInDocuments.Entities
                 }
                 else
                 {
-                    Console.WriteLine("A opção selecionada não é valida.");
+                    Menu.ErroConsole("A opção selecionada não é valida.");
                     continue;
                 }
             }
