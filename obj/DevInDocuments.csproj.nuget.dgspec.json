@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocuments\\DevInDocuments\\DevInDocuments.csproj": {}
+    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocumentsBitBucket\\DevInDocuments.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocuments\\DevInDocuments\\DevInDocuments.csproj": {
+    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocumentsBitBucket\\DevInDocuments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocuments\\DevInDocuments\\DevInDocuments.csproj",
+        "projectUniqueName": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocumentsBitBucket\\DevInDocuments.csproj",
         "projectName": "DevInDocuments",
-        "projectPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocuments\\DevInDocuments\\DevInDocuments.csproj",
+        "projectPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocumentsBitBucket\\DevInDocuments.csproj",
         "packagesPath": "C:\\Users\\Computador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocuments\\DevInDocuments\\obj\\",
+        "outputPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 6\\DevInDocumentsBitBucket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Computador\\AppData\\Roaming\\NuGet\\NuGet.Config",

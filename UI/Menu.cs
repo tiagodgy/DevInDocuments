@@ -54,8 +54,7 @@ namespace DevInDocuments.UI
                     {
                         controle += 1;
                         Console.Clear();
-                        Console.WriteLine($"Seja bem vindo {pessoa.Nome}!");
-                        Console.WriteLine("");
+                        SucessoConsole($"Seja bem vindo {pessoa.Nome}!");
                         return pessoa.Codigo;
                     }
                     
@@ -64,8 +63,7 @@ namespace DevInDocuments.UI
             if(controle == 0)
             {
                 Console.Clear();
-                Console.WriteLine("Código ou senha inválida");
-                Console.WriteLine("");
+                ErroConsole("Código ou senha inválida");
                 throw new UserNotFoundException();
             }
             else
@@ -124,7 +122,7 @@ namespace DevInDocuments.UI
                 }
                 else
                 {
-                    Console.WriteLine("As senhas digitadas não são iguais");
+                    ErroConsole("As senhas digitadas não são iguais");
                     continue;
                 }
             }
@@ -132,7 +130,8 @@ namespace DevInDocuments.UI
             
             Pessoa novoFuncionario = new Pessoa(codigoUsuario, nomeUsuario, enderecoUsuario, nascimento, filiacaoUsuario, DateTime.Now, senha);
             lista.Add(novoFuncionario);
-            Console.WriteLine($"Novo usuário criado com sucesso! O código de acesso é: {codigoUsuario}");
+            Console.Clear();
+            SucessoConsole($"Novo usuário criado com sucesso! O código de acesso é: {codigoUsuario}");
         }
 
         public static void AlterarDocumento(List<Documento> lista)
@@ -155,7 +154,7 @@ namespace DevInDocuments.UI
             }
             if (controle == 0)
             {
-                Console.WriteLine("Não foi possível localizar o documento");
+                ErroConsole("Não foi possível localizar o documento");
             }
 
         }
@@ -180,14 +179,13 @@ namespace DevInDocuments.UI
             }
             if (controle == 0)
             {
-                Console.WriteLine("Não foi possível localizar o documento");
+                ErroConsole("Não foi possível localizar o documento");
             }
 
         }
 
         public static void PesquisarDocumentos(List<Documento> lista)
         {
-            Console.Clear();
             while (true)
             {
                 Console.WriteLine("Digite 1 para exibir todos os documentos");
@@ -198,6 +196,7 @@ namespace DevInDocuments.UI
                 Console.WriteLine("Digite 6 para SAIR");
 
                 var escolhaPesquisa = Console.ReadLine();
+                Console.Clear();
                 if (escolhaPesquisa == "1")
                 {
                     foreach(var documento in lista)
@@ -257,7 +256,7 @@ namespace DevInDocuments.UI
                         }
                         else
                         {
-                            Console.WriteLine("Opção selecionada não é valida");
+                            ErroConsole("Opção selecionada não é valida");
                             continue;
                         }
 
@@ -265,7 +264,7 @@ namespace DevInDocuments.UI
                     }
                     if(controleStatus == 0)
                     {
-                        Console.WriteLine("Não foi possível localizar nenhum documento com esse filtro");
+                        ErroConsole("Não foi possível localizar nenhum documento com esse filtro");
                     }
                     continue;
 
@@ -325,7 +324,7 @@ namespace DevInDocuments.UI
                     }
                     if (controleTipo == 0)
                     {
-                        Console.WriteLine("Não foi possível localizar nenhum documento com esse filtro");
+                        ErroConsole("Não foi possível localizar nenhum documento com esse filtro");
                     }
                     continue;
 
@@ -345,7 +344,7 @@ namespace DevInDocuments.UI
                     }
                     if (controleCodigo == 0)
                     {
-                        Console.WriteLine("Não foi possível localizar o documento");
+                        ErroConsole("Não foi possível localizar o documento");
                     }
                     continue;
 
@@ -357,7 +356,7 @@ namespace DevInDocuments.UI
                     {
                         controleTotal += 1;
                     }
-                    Console.WriteLine($"O total de documentos cadastrados é {controleTotal}");
+                    SucessoConsole($"O total de documentos cadastrados: {controleTotal} \n");
                     continue;
 
 
@@ -368,14 +367,27 @@ namespace DevInDocuments.UI
                 }
                 else
                 {
-                    Console.WriteLine("Opção selecionada não é valida");
+                    ErroConsole("Opção selecionada não é valida");
                     continue;
                 }
             }
             
 
         }
-    }
 
+        public static void ErroConsole(string mensagem)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"\n {mensagem} \n");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public static void SucessoConsole(string mensagem)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\n {mensagem} \n");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+    }
     
 }
